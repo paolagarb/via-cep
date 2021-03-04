@@ -22,26 +22,28 @@
         <h2 id="cepTitulo">CEP</h2>
     </div>
 
-    <table class="table mt-3">
-        <thead>
-            <tr>
-                <th scope="col">DDD</th>
-                <th scope="col">UF</th>
-                <th scope="col">Cidade</th>
-                <th scope="col">Logradouro</th>
-                <th scope="col">Bairro</th>
+    <div class="container">
+        <table class="table mt-4">
+            <thead>
+                <tr>
+                    <th scope="col">DDD</th>
+                    <th scope="col">UF</th>
+                    <th scope="col">Cidade</th>
+                    <th scope="col">Logradouro</th>
+                    <th scope="col">Bairro</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr class="table-active">
+                <td scope="row" id="ddd"></td>
+                <td scope="row" id="uf"></td>
+                <td scope="row" id="cidade"></td>
+                <td scope="row" id="rua"></td>
+                <td scope="row" id="bairro"></td>
             </tr>
-        </thead>
-        <tbody>
-          <tr class="table-active">
-            <td scope="row" id="ddd"></td>
-            <td scope="row" id="uf"></td>
-            <td scope="row" id="cidade"></td>
-            <td scope="row" id="rua"></td>
-            <td scope="row" id="bairro"></td>
-          </tr>
-        </tbody>
-    </table>
+            </tbody>
+        </table>
+    </div>
 
     <script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="/js/script.js"></script>
