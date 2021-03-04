@@ -4,70 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style/bootstrap.min.css">
-    <title>Cadastro</title>
+    <link rel="stylesheet" type="text/css" href="/style/bootstrap.min.css">
+    <title>BuscaCEP</title>
 </head>
 <body>
-    <div class="text-center m-4">
-        <h1>Cadastro</h1>
-    </div>
-    
-    <div class="container ml-5">
-        <div class="row">
-            <div class="col-sm-6 col-12">
-                <div>
-                    Nome
-                </div>
-                <div>
-                    <input type="text" name="nome" id="nome" class="w-100">
-                </div>
-            </div>
-            <div class="col-sm-3 col-12">
-                <div>
-                    Telefone
-                </div>
-                <div>
-                    <input type="text" name="telefone" id="telefone" class="w-100">
-                </div>
-            </div>
-            <div class="col-sm-3 col-12">
-                <div>
-                    CEP
-                </div>
-                <div class="d-flex flex-row">
-                    <input type="text" name="cep" id="cep" class="w-75">
-                    <input type="button" class="btn btn-primary ml-1" value="Consultar" id="consultar" >
-                </div>
-            </div>
 
+
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="text-white">
+            BuscaCEP
         </div>
-        <div class="row mt-2">
-            <div class="col-sm-6 col-12">
-                <div class="ml-1">
-                    Rua/Avenida
-                </div>
-                <div>
-                    <input type="text" name="endereco" id="endereco" class="w-100">
-                </div>
-            </div>
-            <div class="col-sm-2 col-12">
-                <div class="w-100">
-                   Número
-                </div>
-                <div>
-                    <input type="text" name="numero" id="numero" class="w-100">
-                </div>
-            </div>
-            <div class="col-sm-4 col-12">
-                <div>
-                   Bairro
-                </div>
-                <div>
-                    <input type="text" name="bairro" id="bairro" class="w-100">
-                </div>
-            </div>
+        <div class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="09000100" id="cep">
+            <button class="btn btn-outline-info ml-1" id="consultar">Buscar</button>
         </div>
-    </div>
+      </nav>
+    <table class="table mt-3">
+        <thead>
+            <tr>
+                <th scope="col">DDD</th>
+                <th scope="col">UF</th>
+                <th scope="col">Cidade</th>
+                <th scope="col">Logradouro</th>
+                <th scope="col">Bairro</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr class="table-active">
+            <td scope="row" id="ddd"></td>
+            <td scope="row" id="uf"></td>
+            <td scope="row" id="cidade"></td>
+            <td scope="row" id="rua"></td>
+            <td scope="row" id="bairro"></td>
+          </tr>
+        </tbody>
+    </table>
     <script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="/js/script.js"></script>
 </body>

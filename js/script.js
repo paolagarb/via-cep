@@ -11,8 +11,11 @@ $(function() {
             type: "GET",
             success: function(response) {
                 console.log(response);
-                $('#endereco').val(response.logradouro);
-                $('#bairro').val(response.bairro);
+                $('#ddd').html(response.ddd);
+                $('#rua').html(response.logradouro);
+                $('#bairro').html(response.bairro);
+                $('#cidade').html(response.localidade);
+                $('#uf').html(response.uf);
             }
         })
     }) 
