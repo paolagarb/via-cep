@@ -2,7 +2,7 @@
 
 $(function() {
     $("#consultar").on("click",  function() {
-        
+
     var cep = $('#cep').val();
     var url = "https://viacep.com.br/ws/"+cep+"/json/";
     
@@ -11,7 +11,9 @@ $(function() {
             type: "GET",
             success: function(response) {
                 console.log(response);
+                $('#endereco').val(response.logradouro);
+                $('#bairro').val(response.bairro);
             }
         })
-    })
+    }) 
 })
