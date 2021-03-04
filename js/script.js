@@ -1,7 +1,13 @@
+
+
 $(function() {
     $("#consultar").on("click",  function() {
+        
+    var cep = $('#cep').val();
+    var url = "https://viacep.com.br/ws/"+cep+"/json/";
+    
         $.ajax({
-            url: "https://viacep.com.br/ws/13414020/json/",
+            url: url,
             type: "GET",
             success: function(response) {
                 console.log(response);
